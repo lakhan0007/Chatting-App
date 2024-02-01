@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!---icon CDN---->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Get your own code at fontawesome.com-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Rajdhani&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!----chat---->
+    <div class="container">
+        <div class="signal">
+            <p class="time">9:10</p>
+            <span>
+                <i class="fa fa-signal"></i>
+                <i class="fa fa-wifi"></i>
+                <i class="fa fa-battery"></i>
+            </span>
+        </div>
+
+        <div class="all-chats">
+            <div class="myProfile">
+                <span>
+                    <img class="meProfile"
+                        src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        onclick="zoomProfile('me',` ${document.getElementsByClassName('meProfile')[0].src}`)">
+                    <p>chats</p>
+                </span>
+
+                <div class="plus">
+                    <i class="fa fa-plus"></i>
+                    <input type="file" onchange="profileUpload(event)">
+                </div>
+
+            </div>
+
+            <input type="text" placeholder="search" onchange="search()" onkeydown="search()" onkeyup="search()"
+                onkeypress="search()" class="search">
+
+            <div class="chats-container">
+                <ul>
+                    <li>
+                        <img src="https://c1.wallpaperflare.com/preview/89/271/749/portrait-girl-studio-female-woman-profile.jpg"
+                            onclick="zoomProfile('sara sanders','https://c1.wallpaperflare.com/preview/89/271/749/portrait-girl-studio-female-woman-profile.jpg')">
+
+                        <div class="content"
+                            onclick="chatShow('sara sanders','https://c1.wallpaperflare.com/preview/89/271/749/portrait-girl-studio-female-woman-profile.jpg')">
+                            <span>
+                                <p class="name">
+                                    sara sanders
+                                </p>
+                                <p class="msg">
+                                    Can you buy me dinner?
+                                </p>
+                            </span>
+
+                            <span>
+                                <p class="timing">
+                                    12:35
+                                </p>
+                                <p class="total-msg">
+                                    100
+                                </p>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://i0.wp.com/techoffernews.com/wp-content/uploads/2022/12/f7.jpeg?resize=523%2C780&ssl=1"
+                            onclick="zoomProfile('doris diaz','https://i0.wp.com/techoffernews.com/wp-content/uploads/2022/12/f7.jpeg?resize=523%2C780&ssl=1')">
+
+                        <div class="content"
+                            onclick="chatShow('doris diaz','https://i0.wp.com/techoffernews.com/wp-content/uploads/2022/12/f7.jpeg?resize=523%2C780&ssl=1')">
+                            <span>
+                                <p class="name">
+                                    doris diaz
+                                </p>
+                                <p class="msg">
+                                    Read this article, it is so awesome..
+                                </p>
+                            </span>
+
+                            <span>
+                                <p class="timing">
+                                    10:15
+                                </p>
+                                <p class="total-msg">
+                                    99+
+                                </p>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://deadline.com/wp-content/uploads/2023/05/GettyImages-1491985208.jpg?w=681&h=383&crop=1"
+                            onclick="zoomProfile('Jennifer Lawrence','https://deadline.com/wp-content/uploads/2023/05/GettyImages-1491985208.jpg?w=681&h=383&crop=1')">
+
+                        <div class="content"
+                            onclick="chatShow('Jennifer Lawrence','https://deadline.com/wp-content/uploads/2023/05/GettyImages-1491985208.jpg?w=681&h=383&crop=1')">
+                            <span>
+                                <p class="name">
+                                    Jennifer Lawrence
+                                </p>
+                                <p class="msg">
+                                    Where you at? I'm here
+                                </p>
+                            </span>
+
+                            <span>
+                                <p class="timing">
+                                    10 min
+                                </p>
+                                <p class="total-msg">
+                                    2
+                                </p>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://images.bravo.de/kristen-stewart-grosse-sorgen-um-twilightjpeg,id=a6590d6a,b=bravo,w=1100,rm=sk.jpeg"
+                            onclick="zoomProfile('Kristen Stewart','https://images.bravo.de/kristen-stewart-grosse-sorgen-um-twilightjpeg,id=a6590d6a,b=bravo,w=1100,rm=sk.jpeg')">
+
+                        <div class="content"
+                            onclick="chatShow('Kristen Stewart','https://images.bravo.de/kristen-stewart-grosse-sorgen-um-twilightjpeg,id=a6590d6a,b=bravo,w=1100,rm=sk.jpeg')">
+                            <span>
+                                <p class="name">
+                                    Kristen Stewart
+                                </p>
+                                <p class="msg">
+                                    are you sure?
+                                </p>
+                            </span>
+
+                            <span>
+                                <p class="timing" style="color:#888a94;margin-top:-15px;">
+                                    12:35
+                                </p>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://uploads.jovemnerd.com.br/wp-content/uploads/Emily-Blunt-Mary-Poppins-Returns-1210x544.jpg"
+                            onclick="zoomProfile('Emily Blunt','https://uploads.jovemnerd.com.br/wp-content/uploads/Emily-Blunt-Mary-Poppins-Returns-1210x544.jpg')">
+
+                        <div class="content"
+                            onclick="chatShow('Emily Blunt','https://uploads.jovemnerd.com.br/wp-content/uploads/Emily-Blunt-Mary-Poppins-Returns-1210x544.jpg')">
+                            <span>
+                                <p class="name">
+                                    Emily Blunt
+                                </p>
+                                <p class="msg">
+                                    I know that.
+                                </p>
+                            </span>
+
+                            <span>
+                                <p class="timing" style="color:#888a94;margin-top:-15px;">
+                                    10:12
+                                </p>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="profileZoom">
+                    <div class="profile">
+                        <img
+                            src="https://c1.wallpaperflare.com/preview/89/271/749/portrait-girl-studio-female-woman-profile.jpg">
+                        <p class="profileName">sara sanders</p>
+                        <i class="fa fa-info-circle"></i>
+                    </div>
+                </div>
+                <!----profileZoom--->
+            </div>
+            <!---chats-container---->
+
+            <div class="nav">
+                <i class='fas fa-comment-alt active'></i>
+                <i class="fa fa-camera"></i>
+                <i class="fa fa-barcode"></i>
+                <i class="fa fa-gear"></i>
+            </div>
+
+            <div class="bar"></div>
+        </div>
+        <!----all-chats--->
+
+
+        <div class="personal-chats">
+            <div class="user-details">
+                <span>
+                    <i class="fa fa-arrow-left"
+                        onclick="document.getElementsByClassName('personal-chats')[0].style.right='-100%';"></i>
+                    <span>
+                        <img src="https://c1.wallpaperflare.com/preview/89/271/749/portrait-girl-studio-female-woman-profile.jpg"
+                            class="theyProfileImg">
+                        <div>
+                            <p class="user-name">
+                                sara sanders
+                            </p>
+                            <p class="stutes">typing...</p>
+                        </div>
+                    </span>
+                </span>
+                <i class="fa fa-phone"></i>
+            </div>
+
+            <div class="text-container">
+                <p class="when">today</p>
+                <div class="me msg">
+                    <div>
+                        <p>Hello, How are you?</p>
+                        <p class="time">4:09</p>
+                    </div>
+                </div>
+                <div class="they msg">
+                    <div>
+                        <p>Hey , Its been awhile</p>
+                        <p class="time">4:09</p>
+                    </div>
+                </div>
+                <div class="they msg">
+                    <div>
+                        <p>What's up?</p>
+                        <p class="time">4:09</p>
+                    </div>
+                </div>
+                <div class="me msg">
+                    <div>
+                        <p>I wonder if you would like to watch movie tonight?</p>
+                        <p class="time">4:09</p>
+                    </div>
+                </div>
+                <div class="they msg">
+                    <div>
+                        <p>Sounds like a good idea?</p>
+                        <p class="time">4:09</p>
+                    </div>
+                </div>
+                <div class="they msg">
+                    <div>
+                        <p>Thnk for asking?</p>
+                        <p class="time">4:10</p>
+                    </div>
+                </div>
+            </div>
+            <!----text-container---->
+
+            <span class="submit">&#8618;</span>
+            <div class="msg-box">
+                <div class="msg">
+                    <i class='far fa-grin'></i>
+                    <textarea placeholder="Type a message" id="msg"></textarea>
+                    <i class="fa fa-link"></i>
+                    <i class="fa fa-camera"></i>
+                </div>
+                <i class="fa fa-microphone" onclick="play()"></i>
+            </div>
+            <!----msg-box---->
+            <div class="bar"></div>
+        </div>
+        <!----personal-chats---->
+
+
+        <div class="calling-container">
+            <audio id="song"
+                src="https://github.com/Short-Zed/Movie-Responsive-Site/raw/main/WHATSAPP%20VIDEO%20CALLING%20RINGTONE%20MEME%20%20SOUND%20EFFECT.mp3"
+                type="audio/mp3" loop="loop" autoplay></audio>
+            <p class="calling-name">sara sanders</p>
+            <p class="calling-status">incoming call ...</p>
+
+            <img class="calling-profile"
+                src="https://c1.wallpaperflare.com/preview/89/271/749/portrait-girl-studio-female-woman-profile.jpg">
+
+            <div class="calling-icon">
+                <div>
+                    <i class="fa fa-phone decline"
+                        onclick="document.getElementsByClassName('calling-container')[0].style.right='-100%';audio.pause();"></i>
+                    <p>decline</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-phone accept"></i>
+                    <p>accept</p>
+                </div>
+            </div>
+            <!---calling icon--->
+
+        </div>
+        <!----calling container--->
+
+    </div>
+    <!----container--->
+
+
+    <!---note--->
+    <p class="note">
+        chatting app
+    </p>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
